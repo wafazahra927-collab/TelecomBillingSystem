@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
-#include <windows.h> // Colors aur Sleep ke liye
-#include <conio.h>   // Password hidden rakhne ke liye
+#include <windows.h> 
+#include <conio.h>   
 using namespace std;
 const int MAX = 100;
 int custID[MAX];
@@ -46,7 +46,7 @@ void login() {
         login();
     }
 }
-// --- ORIGINAL LOGIC (Unchanged) ---
+
 int findCustomer(int id) {
     for (int i = 0; i < total; i++) {
         if (custID[i] == id) return i;
@@ -135,7 +135,6 @@ void customerMenu() {
         }
     } while (choice != 5);
 }
-// Baki menus (usageMenu, billingMenu etc) mein bhi drawHeader use kiya hai
 void usageMenu() {
     int choice;
     do {
@@ -249,8 +248,7 @@ void searchMenu() {
     }
 }
 int main() {
-    // GUI SETUP
-    system("color f0"); // Professional White Screen
+    system("color f0");
     loadingBar();
     login();
     int choice;
@@ -274,4 +272,5 @@ int main() {
         }
     } while (choice != 5);
     return 0;
+
 }
